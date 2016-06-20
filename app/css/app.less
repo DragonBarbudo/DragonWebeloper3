@@ -1,0 +1,51 @@
+@import '../../dw3/_dw3';
+
+/* WIDTHS */
+@containerWidth: 1200px;
+@containerWidthTablet : 720px;
+@gutterWidth: 5px;
+/* COLORS */
+@black:   #222;
+@white:   #f5f5f5;
+@gray:    #888;
+@main:    #ffdd00;
+@sec:     #4082BC;
+
+/* -----------  */
+
+body{
+  .box-sizing(border-box);
+}
+
+//TESTER COLS
+.for(13, {.callback(@i) {
+    .c@{i}.t {
+      padding: 10px 2px;
+      .background-image(linear-gradient( rgb(200+(55/@i), 255/@i,20*@i), rgb(150, 255/@i,20*@i) ));
+      font-size: 0.7rem;
+      text-align: center;
+      /*
+      position: relative;
+      &:before{
+        @thesize: 100/@i+0%;
+        content:"";
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAAAKCAYAAABCHPt+AAAABGdBTUEAALGPC/xhBQAAAENJREFUSA3t01ENADAMhNBm7uatopdMxfugCgj0ZnfvdIyBw5AE8g0UBHuEghQEM4DhtJCCYAYwnBZSEMwAhtNCsCAPxFwCACTtst8AAAAASUVORK5CYII=');
+        background-size: @thesize;
+        background-repeat:repeat;
+        position: absolute;
+        left: 0; right: 0; top: 0; bottom: 0;
+      }
+      */
+    }
+
+}});
+
+.bigger{
+  height: 100px;
+  margin-top: 20px;
+}
+
+#especifico{
+  .c5;
+  background: @main;
+}
